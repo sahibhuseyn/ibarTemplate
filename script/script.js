@@ -1,3 +1,25 @@
+var main = document.getElementById('main');
+var placeholder = document.querySelector('#searchPlaceholder');
+var trick = document.querySelector('.searchTrick');
+var searchInput = document.getElementsByClassName('searchInput')[0];
+var span = document.getElementsByClassName('exVal');
+
+function newVal(val){
+	searchInput.value = val.innerText;
+}
+
+searchInput.addEventListener('click',function(){
+	trick.style.display = 'block';
+	placeholder.setAttribute('class','focus')
+})
+// searchInput.addEventListener('blur',function(){
+// 	trick.style.display = 'none';
+// 	placeholder.setAttribute('class','')
+// })
+
+
+
+
 var sliderArr = ['images/500x230_2-1.jpg','images/500x230-1.jpg','images/emek-kredit-1.jpg'];
 var i=0;
 var sliderBg = document.querySelector('.slider');
@@ -15,6 +37,7 @@ var zoomMain = document.querySelector('#main');
 function close(btn){
 	btn.style.display = 'none';
 	zoomMain.setAttribute('class','');
+	changeBg.style.display ='none';
 }
 function showDivs(divs){
 	divs.style.display = 'block';
@@ -46,11 +69,11 @@ var h2 = document.querySelector('.hTitle');
 var hLink = document.querySelectorAll('.hLink');
 
 individualBtn.addEventListener('click', function(){
+	changeBg.style.display = 'block';
 	h2.innerHTML=changeCapArr[0];
 	for (var x = 0; x<individualListArr.length;x++) {
 	hLink[x].innerHTML = individualListArr[x];
 	}
-
 	changeBg.appendChild(overlay);
 	changeBg.setAttribute('class','individualBg');
 	individualBtn.setAttribute('class','active');
@@ -63,6 +86,8 @@ individualBtn.addEventListener('click', function(){
 	},50)
 })
 corporateBtn.addEventListener('click', function(){
+		changeBg.style.display = 'block';
+
 
 	h2.innerHTML=changeCapArr[1];
 	for (var x = 0; x<corporativeListArr.length;x++) {

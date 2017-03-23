@@ -13,7 +13,6 @@
 </head>
 <body>
 	
-	<!-- <div class="individualBg"></div> -->
 	<div id="main">
 		<div class="wrapper" >
 				<div class="row">
@@ -75,21 +74,36 @@
 				<div class="row" style="display: flex; justify-content: center;align-items: center;">
 					<div class="middleSection" style="width: 620px;height: 255px;">
 						<div class="col12">
-							<input type="text" placeholder="">
-							<span class="searchPlaceholder">Sizə necə kömək edə bilərik?</span>
+							<input type="text" value="" onblur=" this.value = '';" class="searchInput">
+							<span id="searchPlaceholder">Sizə necə kömək edə bilərik?</span>
 							<span class="searchIcon">
 								<i class="fa fa-search" aria-hidden="true"></i>
 								<i class="fa fa-bars" aria-hidden="true"></i>
 							</span>
+							<div class="col11 searchTrick">
+								<ul>
+									<li>Meselen:</li>
+									<li><span onclick="newVal(this)" class="exVal">Valyuta</span></li>
+									<li><span onclick="newVal(this)" class="exVal">Kredit</span></li>
+									<li><span onclick="newVal(this)" class="exVal">Depozit</span></li>
+									<li><span onclick="newVal(this)" class="exVal">Kart</span></li>
+									<li><span onclick="newVal(this)" class="exVal">InternetBanking</span></li>
+								</ul>
+							</div>
 						</div>
 						<div class="col8">
 							<div class="imageHolder">
 								<div class="imageOverlay">
 									<img src="images/500x230-1.jpg" alt="" class="slider">
+									<div class="col3 dots">
+										<span class="bullets" onclick="prevNext(1)"></span>
+										<span class="bullets" onclick="prevNext(2)"></span>
+										<span class="bullets" onclick="prevNext(3)"></span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col3 col_offset detailsSection">
+						<div class="col3 detailsSection">
 							<a href="" class="detailsLink">
 								<div class="details">
 									<p class="payment">Ödənişlər aparın</p>

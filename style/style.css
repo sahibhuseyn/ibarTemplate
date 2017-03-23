@@ -121,19 +121,46 @@ html, body{
 	border-bottom: 3px solid rgb(127, 151, 200);
 	outline: none;
 	font-size: 36px;
+	color: #fff;
+
 }
 .middleSection input[type='text']:focus{
 	color: rgb(127, 151, 200);
 }
-.searchPlaceholder, .searchIcon{
+#searchPlaceholder, .searchIcon{
 	position:absolute;
 	top: 20%;
 	left: 1%;
 	font-size: 36px;
+	transition: all .2s ease-out;
 }
 .searchIcon{
 	left: 85% !important;
 	font-weight: 100;
+}
+.searchTrick{
+	display: none;
+	margin-top: 5px;
+}
+.searchTrick li{
+	float: left;
+	font-size: 14px;
+	margin: 2px;
+}
+.searchTrick li>span{
+	background: #7892c5;
+	padding: 3px 15px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.focus {
+    -webkit-transform: translate(0, -20px) scale(.5);
+    -ms-transform: translate(0, -20px) scale(.5);
+    transform: translate(0, -20px) scale(.5);
+    height: 44px;
+    position: relative;
+    left: 0;
+    top: 0;
 }
 .imageHolder{
 	width: 410px;
@@ -151,6 +178,24 @@ html, body{
 	height: 100%;
 	background: #5575b7;
 	opacity: .5;
+}
+.bullets{
+	cursor:pointer;
+ 	height: 14px;
+ 	width: 14px;
+ 	margin: 0 2px;
+ 	border: 2px solid #333;
+ 	border-radius: 50%;
+ 	display: inline-block;
+ 	transition: background-color 0.6s ease;
+}
+.active, .bullets:hover {
+  	background-color: #333;
+ 	height: 20px;
+ 	width: 20px;
+ 	margin: 0 2px;
+ 	border-radius: 50%;
+ 	transition: background-color 0.6s ease;
 }
 .detailsSection{
 	width: 185px;
@@ -424,8 +469,10 @@ html, body{
 	z-index: 0;
 	width: 100vw;
 	height: 100vh;
+	transition: all .3s cubic-bezier(0, 0, 0.2, 1);
 	 -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 15% 100%);
     clip-path: polygon(65% 0, 100% 0, 100% 100%, 15% 100%);
+    display: none;
 }
 .individualBg{
 	width: 100vw;
@@ -473,5 +520,4 @@ html, body{
 }
 .hList a:hover{
 	text-decoration: underline;
-
 }
