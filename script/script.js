@@ -87,34 +87,55 @@ var hLink = document.querySelectorAll('.hLink');
 individualBtn.addEventListener('click', function(){
 	 
 	setTimeout(function(){
-	middleSection.style.top = '-50vh';
+		middleSection.style.top = '-50vh';
 	setTimeout(function(){
-	middleSection.style.top = '-100vh';
+		middleSection.style.top = '-100vh';
 	setTimeout(function(){
 		middleSection.style.display = 'none';
 	},50)
-	},50)},50)
-		// myFun()
-	// setTimeout(function(){
-	// 	changeBg.setAttribute('style',)
-	// },100)
-	
-	h2.innerHTML=changeCapArr[0];
-	for (var x = 0; x<individualListArr.length;x++) {
-	hLink[x].innerHTML = individualListArr[x];
-	}
-	changeBg.appendChild(overlay);
-	changeBg.setAttribute('class','individualBg');
-	individualBtn.setAttribute('class','active');
-	corporateBtn.setAttribute('class','')
+	},50)},50);
+		setTimeout(function(){myFun()
+			setTimeout(function(){
+				h2.innerHTML=changeCapArr[0];
+				for (var x = 0; x<individualListArr.length;x++) {
+				hLink[x].innerHTML = individualListArr[x];
+				}
+				changeBg.appendChild(overlay);
+				changeBg.setAttribute('class','individualBg');
+				individualBtn.setAttribute('class','active');
+				corporateBtn.setAttribute('class','');
 
+			},30)
+			},30)
+	
 })
 function myFun(){
-	var m = 'polygon(65% 0, 100% 0, 100% 100%, 15% 100%)';
-	changeBg.style.clipPath = m;
+
+	var n = 'polygon(93% 0, 100% 0, 100% 100%, 95% 100%)';
+	var m = 'polygon(89% 0, 100% 0, 100% 100%, 75% 100%)';
+	var k = "polygon(75% 0, 100% 0, 100% 100%, 55% 100%)";
+	var l = 'polygon(69% 0, 100% 0, 100% 100%, 25% 100%)';
+	var d = 'polygon(65% 0, 100% 0, 100% 100%, 15% 100%)';
+	
+	setTimeout(function(){
+		changeBg.style.clipPath = n;
+		setTimeout(function(){
+			changeBg.style.clipPath = m;
+			setTimeout(function(){
+				changeBg.style.clipPath = k;
+				setTimeout(function(){
+					changeBg.style.clipPath = l;
+					setTimeout(function(){
+						changeBg.style.clipPath = d;
+					},100)
+				},80)
+			},60)
+		},40)
+	},20)
+	changeBg.style.display = 'block';
 }
 corporateBtn.addEventListener('click', function(){
-	changeBg.style.display = 'block';
+	setTimeout(myFun(),30)
 
 	setTimeout(function(){
 	middleSection.style.top = '-50vh';
