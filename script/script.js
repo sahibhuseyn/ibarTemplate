@@ -35,17 +35,33 @@ function slider(){
 /*internet bank side*/
 var zoomMain = document.querySelector('#main');
 function close(btn){
-	btn.style.display = 'none';
-	zoomMain.setAttribute('class','');
-	changeBg.style.display ='none';
+	setTimeout(function(){
+		divs.style.display = 'none';
+		setTimeout(function(){
+			divs.style.right = "-50%";
+		},50)
+	},50)
+	zoomMain.setAttribute('class','zoom_in');
+	
+	
+	// btn.style.display = 'none';
+	// zoomMain.setAttribute('class','');
+	// changeBg.style.display ='none';
 }
 function showDivs(divs){
-	divs.style.display = 'block';
+	setTimeout(function(){
+		divs.style.display = 'block';
+		setTimeout(function(){
+			divs.style.right = 0;
+		},50)
+	},50)
+	
 	zoomMain.setAttribute('class','zoom_out');
 }
-// document.body.addEventListener('click',function(divs){
+
+// document.window.addEventListener('dblclick',function(divs){
 // 	if (divs.style.display == 'block') {
-// 		divs.style.display = 'none'
+// 		divs.style.display == 'none';
 // 	}
 // 	zoomMain.setAttribute('class','');
 	
@@ -69,7 +85,20 @@ var h2 = document.querySelector('.hTitle');
 var hLink = document.querySelectorAll('.hLink');
 
 individualBtn.addEventListener('click', function(){
-	changeBg.style.display = 'block';
+	 
+	setTimeout(function(){
+	middleSection.style.top = '-50vh';
+	setTimeout(function(){
+	middleSection.style.top = '-100vh';
+	setTimeout(function(){
+		middleSection.style.display = 'none';
+	},50)
+	},50)},50)
+		// myFun()
+	// setTimeout(function(){
+	// 	changeBg.setAttribute('style',)
+	// },100)
+	
 	h2.innerHTML=changeCapArr[0];
 	for (var x = 0; x<individualListArr.length;x++) {
 	hLink[x].innerHTML = individualListArr[x];
@@ -78,16 +107,23 @@ individualBtn.addEventListener('click', function(){
 	changeBg.setAttribute('class','individualBg');
 	individualBtn.setAttribute('class','active');
 	corporateBtn.setAttribute('class','')
+
+})
+function myFun(){
+	var m = 'polygon(65% 0, 100% 0, 100% 100%, 15% 100%)';
+	changeBg.style.clipPath = m;
+}
+corporateBtn.addEventListener('click', function(){
+	changeBg.style.display = 'block';
+
 	setTimeout(function(){
-	middleSection.style.top = '-200px';
+	middleSection.style.top = '-50vh';
+	setTimeout(function(){
+	middleSection.style.top = '-100vh';
 	setTimeout(function(){
 		middleSection.style.display = 'none';
 	},50)
-	},50)
-})
-corporateBtn.addEventListener('click', function(){
-		changeBg.style.display = 'block';
-
+	},50)},50)
 
 	h2.innerHTML=changeCapArr[1];
 	for (var x = 0; x<corporativeListArr.length;x++) {
@@ -98,10 +134,4 @@ corporateBtn.addEventListener('click', function(){
 	changeBg.setAttribute('class','corporateBg');
 	corporateBtn.setAttribute('class','active');
 	individualBtn.setAttribute('class','');
-	setTimeout(function(){
-	middleSection.style.top = '-200px';
-	setTimeout(function(){
-		middleSection.style.display = 'none';
-	},50)
-	},50)
 })

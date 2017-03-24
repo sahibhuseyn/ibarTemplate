@@ -19,7 +19,7 @@
     src: url(font/latest_fonts/t-webfont.eot);
     src: url(font/latest_fonts/t-webfontd41d.eot?#iefix) format('embedded-opentype'), url(font/latest_fonts/t-webfont.html) format('woff2'), url(font/latest_fonts/t-webfont.woff) format('woff'), url(font/latest_fonts/t-webfont.ttf) format('truetype');
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
 }
 html, body{
 	background: #1b3e85;
@@ -42,7 +42,7 @@ html, body{
 	mask-position:top;
 	overflow: hidden;
 	-webkit-transition: all 1.5s ease-out;
-    transition: all 1.5s ease-out;
+    transition: all .5s ease;
     position: relative;
     z-index: 556;
     top: 0;
@@ -64,7 +64,7 @@ html, body{
 	text-decoration: none;
 	color: #fff;
 }
-.active a{
+.active>a{
 	background: #5575b7;
 	padding:10px;
 	border-radius: 5px;
@@ -179,7 +179,7 @@ html, body{
 	background: #5575b7;
 	opacity: .5;
 }
-.bullets{
+/*.bullets{
 	cursor:pointer;
  	height: 14px;
  	width: 14px;
@@ -188,8 +188,8 @@ html, body{
  	border-radius: 50%;
  	display: inline-block;
  	transition: background-color 0.6s ease;
-}
-.active, .bullets:hover {
+}*/
+.active, ./*bullets:hover */{
   	background-color: #333;
  	height: 20px;
  	width: 20px;
@@ -335,13 +335,13 @@ html, body{
 	background: url(../images/img/online_b_side.jpg);
 	box-shadow: -95px 0 150px 0 rgba(0, 0, 0, .25);
 	position: fixed;
-	right: 0;
+	right: -50%;
 	top: 0;
-	transition: all .5s cubic-bezier(1, 0, 0, 1);
+	/*transition: all .5s cubic-bezier(1, 0, 0, 1);*/
 	display: none;
 	overflow: hidden;
 	z-index: 6667;
-	/*transition: all 1.5s ease-out;*/
+	transition: all 1.5s ease-out;
 }
 .close>a>img{
 	transition: all .5s cubic-bezier(1, 0, 0, 1);
@@ -390,6 +390,11 @@ html, body{
 }
 .zoom_out{
 	transform: scale(.9) translate(-2%, 0);
+}
+.zoom_in{
+	 -webkit-transform: scale(1) translate(0, 0);
+        -ms-transform: scale(1) translate(0, 0);
+        transform: scale(1) translate(0, 0)
 }
 .contactTypes{
 	position:absolute;
@@ -462,6 +467,7 @@ html, body{
     transition: all .3s ease-out;
     cursor: pointer;
 }
+
 #changeBg{
 	position: absolute;
 	top: 0;
@@ -472,13 +478,16 @@ html, body{
 	transition: all .3s cubic-bezier(0, 0, 0.2, 1);
 	 -webkit-clip-path: polygon(65% 0, 100% 0, 100% 100%, 15% 100%);
     clip-path: polygon(65% 0, 100% 0, 100% 100%, 15% 100%);
-    display: none;
+    /*display: none;*/
+    /*animation-name: example;
+    animation-duration: .4s;*/
 }
 .individualBg{
 	width: 100vw;
 	height: 100vh;
 	background-image: url(../images/ferdi.jpg);
 	background-size: cover;
+	/*clip-path: polygon(65% 0, 100% 0, 100% 100%, 15% 100%);*/
 }
 .corporateBg{
 	width: 100vw;
