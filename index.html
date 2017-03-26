@@ -26,7 +26,7 @@
 						</div>
 						<div class="col3">
 							<h1 id="individual">
-								<a href="#">Fərdi</a>
+								<a href="javascript:void(0)">Fərdi</a>
 							</h1>
 						</div>
 						<div class="col3">
@@ -37,15 +37,15 @@
 					</div>
 					<div class="col6 col_offset_2 menuRightBar">
 						<ul class="menuRight">
-							<li class="contactBtn" onclick="showDivs(document.querySelector('#contactUs'))"><a href="#">Bizimlə əlaqə</a></li>
-							<li onclick="showDivs(document.querySelector('#bankOnline'))"><a href="#">Bank online</a></li>
+							<li class="contactBtn" ><a href="#">Bizimlə əlaqə</a></li>
+							<li class="onlineBank"><a href="#">Bank online</a></li>
 							<li class="currency"><a href="#">usd</a></li>
 							<li class="buy"><a href="#">1.6700 alış<span> •</span></a></li>
 							<li class="sell"><a href="#">1.7400 satış</a></li>
 						</ul>
 						<div class="rightSide">
 							<a href="#">
-								<span onclick="showDivs(document.querySelector('#internetBank'))">internetBank</span>
+								<span class="internetBank">internetBank</span>
 							</a>
 						</div>
 					</div>
@@ -56,16 +56,16 @@
 						<div class="hList">
 							<ul class="hUl">
 								<div class="col6">
-									<li><a href="" class="hLink"></a></li>
-									<li><a href="" class="hLink"></a></li>
-									<li><a href="" class="hLink"></a></li>
-									<li><a href="" class="hLink"></a></li>
+									<li><a href="javascript:void(0)" class="hLink"></a></li>
+									<li><a href="javascript:void(0)" class="hLink"></a></li>
+									<li><a href="javascript:void(0)" class="hLink"></a></li>
+									<li><a href="javascript:void(0)" class="hLink"></a></li>
 								</div>
 								<div class="col6">
-									<li><a href="" class="hLink"></a></li>
-									<li><a href="" class="hLink"></a></li>
-									<li><a href="" class="hLink"></a></li>
-									<li><a href="" class="hLink"></a></li>
+									<li><a href="javascript:void(0)" class="hLink"></a></li>
+									<li><a href="javascript:void(0)" class="hLink"></a></li>
+									<li><a href="javascript:void(0)" class="hLink"></a></li>
+									<li><a href="javascript:void(0)" class="hLink"></a></li>
 								</div>
 							</ul>
 						</div>
@@ -92,15 +92,18 @@
 							</div>
 						</div>
 						<div class="col8">
+							<div class="col3 ">
+										<div class="dots">
+											<span class="bullets" onclick="prevNext(1)"></span>
+											<span class="bullets" onclick="prevNext(2)"></span>
+											<span class="bullets" onclick="prevNext(3)"></span>
+										</div>
+								</div>
 							<div class="imageHolder">
 								<div class="imageOverlay">
 									<img src="images/500x230-1.jpg" alt="" class="slider">
-									<!-- <div class="col3 dots">
-										<span class="bullets" onclick="prevNext(1)"></span>
-										<span class="bullets" onclick="prevNext(2)"></span>
-										<span class="bullets" onclick="prevNext(3)"></span>
-									</div> -->
 								</div>
+								
 							</div>
 						</div>
 						<div class="col3 detailsSection">
@@ -200,7 +203,6 @@
 		<div id="changeBg">
 		</div>
 	</div>
-
 	
 	<div id="internetBank">
 		<div class="row internet">
@@ -209,8 +211,8 @@
 					InternetBank
 				</p>
 			</div>
-			<div class="col2 close">
-				<a href=""><img src="images/img/close_gray.svg" alt=""></a>
+			<div class="col2">
+				<a href="javascript:void(0)"><img src="images/img/close_gray.svg" alt="" class="closeDivfirst"></a>
 			</div>
 		</div>
 		<div class="row">
@@ -223,15 +225,19 @@
 		</div>
 	</div>
 
-	<div id="contactUs">
+	<div id="contactUs" >
 		<div class="row contact">
 			<div class="col10">
 				<p class="contactCaption">
-					Bizimlə Əlaqə
+				<span class="leftArrow">
+				<i class="fa fa-angle-left" aria-hidden="true"></i></span>
+					<span class="conCapP">
+						Bizimlə Əlaqə
+					</span>
 				</p>
 			</div>
-			<div class="col2 close" onclick="(close(document.querySelector('#contactUs'))">
-				<a href=""><img src="images/img/close_gray.svg" alt=""></a>
+			<div class="col2 ">
+				<a href="javascript:void(0)"><img src="images/img/close_gray.svg" alt="" class="closeDivsecond"></a>
 			</div>
 		</div>
 		<div class="row">
@@ -243,7 +249,9 @@
 					<li><a href="#">Facebookda soruşun</a></li>
 				</ul>
 			</div>
-			<div class="col12 writeUsForm">
+		</div>
+		<div class="col12">
+			<div class="writeUsForm">
 				<h4 class="writeUsCaption">Bize yazin</h4>
 				<form action="">
 					<div class="formLine">
@@ -252,15 +260,18 @@
                     </div>
                     <div class="formLine">
                         <label>Bankın müştərisisinizmi?</label><br>
-                        <label>
-                        	<input type="radio" name="customer">
-                        	<span>Bəli</span>
-                        </label>
-                        <label>
-                        	<input type="radio" name="customer">
-                        	<span>Xeyr</span>
-                        </label>
+                        <div class="choose">
+                            <label>
+                                <input type="radio" name="customer" value="1" checked="">
+                                <span>Bəli</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="customer" value="0">
+                                <span>Xeyr</span>
+                            </label>
+                         </div>
                     </div>
+                    <div class="clearFix"></div>
                     <div class="formLine">
                         <label>Mobil telefon nömrəsi</label>
                         <input type="text" name="phone" placeholder="Mobil telefon nömrənizi daxil edin" class="phoneMask">
@@ -287,19 +298,18 @@
 				</form>
 				<button class="comBtn">Tamamlamaq</button>
 			</div>
-		</div>
+			</div>
 	</div>
 
-
-	<div id="bankOnline">
+	<div id="bankOnline" >
 		<div class="row bank">
 			<div class="col10">
 				<p class="bankCaption">
 					Bank Online
 				</p>
 			</div>
-			<div class="col2 close" onclick="(close(document.querySelector('#bankOnline'))">
-				<a href=""><img src="images/img/close_gray.svg" alt=""></a>
+			<div class="col2 " >
+				<a href="javascript:void(0)"><img src="images/img/close_gray.svg" alt="" class="closeDivthird"></a>
 			</div>
 		</div>
 		<div class="row">
@@ -316,6 +326,184 @@
 			</div>
 		</div>
 	</div>
+<!-- 
+	<div id="individualCorporative">
+		<div class="row">
+			<div class="inCorCap">
+				<div class="col3">
+					<ul>
+						<li>Fərdi</li>
+						<li>Korporativ</li>
+					</ul>
+				</div>
+				<div class="col2 " >
+					<a href="javascript:void(0)"><img src="images/img/close_gray.svg" alt="" class="closeDivInCor"></a>
+				</div>
+			</div>
+		</div>
+		<div class="row inCorSearch">
+			<input type="text" value="Axtar">
+		</div>
+		<div class="row">
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Bank 24/7</a>
+				</div>
+				<ul>
+					<li><a href="#">MobilBank</a></li>
+					<li><a href="#">InternetBank</a></li>
+					<li><a href="#">Bankomat</a></li>
+					<li><a href="#">Ödəniş terminalı</a></li>
+					<li><a href="#">Cash-in bankomatı</a></li>
+				</ul>
+			</div>
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Kreditlər<</a>
+				</div>
+				<ul>
+					<li><a href="#">Əmək haqqı krediti</a></li>
+                    <li><a href="#">Pensiya krediti</a></li>
+                    <li><a href="#">Pensiya +</a></li>
+                    <li><a href="#">Kart üzrə kredit limiti</a></li>
+                    <li><a href="#">Əmanətçi nağd krediti</a></li>
+                    <li><a href="#">Əmanətçi kredit limiti</a></li>
+                    <li><a href="#">İpoteka krediti (AİF)</a></li>
+				</ul>
+			</div>
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Əmanətlər</a>
+				</div>
+				<ul>
+					<li><a href="#">"Klassik" əmanəti</a></li>
+                    <li><a href="#">ElektronDepozit</a></li>
+                    <li><a href="#">Əmanətlərin sığortalanması</a></li>
+                    <li><a href="#">Depozit seyfi</a></li>
+                </ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Bank 24/7</a>
+				</div>
+				<ul>
+					<li><a href="#">MobilBank</a></li>
+					<li><a href="#">InternetBank</a></li>
+					<li><a href="#">Bankomat</a></li>
+					<li><a href="#">Ödəniş terminalı</a></li>
+					<li><a href="#">Cash-in bankomatı</a></li>
+				</ul>
+			</div>
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Kreditlər<</a>
+				</div>
+				<ul>
+					<li><a href="#">Əmək haqqı krediti</a></li>
+                    <li><a href="#">Pensiya krediti</a></li>
+                    <li><a href="#">Pensiya +</a></li>
+                    <li><a href="#">Kart üzrə kredit limiti</a></li>
+                    <li><a href="#">Əmanətçi nağd krediti</a></li>
+                    <li><a href="#">Əmanətçi kredit limiti</a></li>
+                    <li><a href="#">İpoteka krediti (AİF)</a></li>
+				</ul>
+			</div>
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Əmanətlər</a>
+				</div>
+				<ul>
+					<li><a href="#">"Klassik" əmanəti</a></li>
+                    <li><a href="#">ElektronDepozit</a></li>
+                    <li><a href="#">Əmanətlərin sığortalanması</a></li>
+                    <li><a href="#">Depozit seyfi</a></li>
+                </ul>
+			</div>
+		</div>
+		</div>
+		<div class="row">
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Bank 24/7</a>
+				</div>
+				<ul>
+					<li><a href="#">MobilBank</a></li>
+					<li><a href="#">InternetBank</a></li>
+					<li><a href="#">Bankomat</a></li>
+					<li><a href="#">Ödəniş terminalı</a></li>
+					<li><a href="#">Cash-in bankomatı</a></li>
+				</ul>
+			</div>
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Kreditlər<</a>
+				</div>
+				<ul>
+					<li><a href="#">Əmək haqqı krediti</a></li>
+                    <li><a href="#">Pensiya krediti</a></li>
+                    <li><a href="#">Pensiya +</a></li>
+                    <li><a href="#">Kart üzrə kredit limiti</a></li>
+                    <li><a href="#">Əmanətçi nağd krediti</a></li>
+                    <li><a href="#">Əmanətçi kredit limiti</a></li>
+                    <li><a href="#">İpoteka krediti (AİF)</a></li>
+				</ul>
+			</div>
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Əmanətlər</a>
+				</div>
+				<ul>
+					<li><a href="#">"Klassik" əmanəti</a></li>
+                    <li><a href="#">ElektronDepozit</a></li>
+                    <li><a href="#">Əmanətlərin sığortalanması</a></li>
+                    <li><a href="#">Depozit seyfi</a></li>
+                </ul>
+			</div>
+		</div>
+		</div>
+		<div class="row">
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Bank 24/7</a>
+				</div>
+				<ul>
+					<li><a href="#">MobilBank</a></li>
+					<li><a href="#">InternetBank</a></li>
+					<li><a href="#">Bankomat</a></li>
+					<li><a href="#">Ödəniş terminalı</a></li>
+					<li><a href="#">Cash-in bankomatı</a></li>
+				</ul>
+			</div>
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Kreditlər<</a>
+				</div>
+				<ul>
+					<li><a href="#">Əmək haqqı krediti</a></li>
+                    <li><a href="#">Pensiya krediti</a></li>
+                    <li><a href="#">Pensiya +</a></li>
+                    <li><a href="#">Kart üzrə kredit limiti</a></li>
+                    <li><a href="#">Əmanətçi nağd krediti</a></li>
+                    <li><a href="#">Əmanətçi kredit limiti</a></li>
+                    <li><a href="#">İpoteka krediti (AİF)</a></li>
+				</ul>
+			</div>
+			<div class="col4">
+				<div class="inCap">
+					<a href="#">Əmanətlər</a>
+				</div>
+				<ul>
+					<li><a href="#">"Klassik" əmanəti</a></li>
+                    <li><a href="#">ElektronDepozit</a></li>
+                    <li><a href="#">Əmanətlərin sığortalanması</a></li>
+                    <li><a href="#">Depozit seyfi</a></li>
+                </ul>
+			</div>
+		</div>
+		</div>
+	</div> -->
 </body>
 <script type="text/javascript" src="script/script.js"></script>
 </html>

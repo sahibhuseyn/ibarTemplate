@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body onscroll="BG()">
+<body>
 	<div id="depozitMain" style="background: url(images/elektrondep1.jpg) no-repeat;">
 		<div class="wrapper">
 			<div class="depozitOverlay"></div>
@@ -76,15 +76,15 @@
 				</div>
 			</div>
 			<div class="clearFix"></div>
-			<div class="row calcSide" onclick="BG()">
+			<div class="row calcSide">
 				<div class="col3">
 					<div class="depoLeft">
 						<b class="leftCap">ElektronDepozit</b>
 						<ul class="depoList">
-							<li><a href="#conditions">Şərtlər</a></li>
-							<li><a href="#subscraption">Qoşulma və istifadə qaydaları</a></li>
-							<li><a href="#rates">Faizlər</a></li>
-							<li><a href="#calculator">Kalkulyator</a></li>
+							<li><a href="#conditions" class="conCap">Şərtlər</a></li>
+							<li><a href="#subscraption" class="subCap">Qoşulma və istifadə qaydaları</a></li>
+							<li><a href="#rates" class="ratesCap">Faizlər</a></li>
+							<li><a href="#calculator" class="calCap">Kalkulyator</a></li>
 						</ul>
 					</div>
 				</div>
@@ -201,14 +201,61 @@
 								</table>
 							</div>
 						</div>
+						<div class="clearFix"></div>
 						<div class="row">
 							<div id="calculator">
-								<div class="row" style="display: flex;justify-content: space-between;">
+								<div class="row">
 									<div class="col1">
 									<h2 class="calcCap">Kalkulyator</h2>
 								</div>
-								<div class="col5">
+								<div class="col5 col_offset_6">
 									<h2 class="calcCap">Ödəniş növü: aylıq, bərabər hissələrlə</h2>
+								</div>
+								<div class="col4" >
+									<p class="rateCap">Əmanətin məbləği</p>
+									<span class="amount">100000</span>
+									<div class="selectCurr">
+										<ul>
+											<li id="azn" class="curSelected">azn</li>
+											<li id="usd">usd</li>
+										</ul>
+									</div>
+									<input type="range" value="0" max="1000000" step="100" class="amountInput" oninput="amountRange(),calcCredit(),calcUsd()">
+								</div>
+								<div class="col4">
+									<p class="rateCap">Müddət</p>
+									<span class="period">12</span>
+									<input type="range" value="0" max="2" class="periodInput" oninput="periodRange()">
+								</div>
+								<div class="col4">
+									<p class="rateCap">Faizlərin ödənilməsi</p>
+									<select id="calcPayment" onclick="periodRange()">
+									  <option value="month">Her ay</option>
+									  <option value="year">Her il</option>
+									</select>
+								</div>
+								<div class="col9">
+									<div class="calcResult">
+										<div class="col4">
+											<p>Faizlərin ümumi məbləği</p>
+											<b><span class="percentTotal">360000.00</span> <u class="curVal">azn</u></b>
+										</div>
+										<div class="col4" style="display: inline-block;">
+											<p>Hər ay ödənilən faiz</p>
+											<b><span class="percentMonth">10000.00</span> <u class="curVal">azn</u></b>
+										</div>
+										<div class="col4" >
+										<div style="display: none;">
+											<p>Hər il ödənilən faiz</p>
+											<b><span class="percentYear">10000.00</span> <u>usd</u></b>
+										</div>
+										</div>
+									</div>
+								</div>
+								<div class="col2">
+									<div >
+										<span class="rateDeg">11%</span>
+									</div>
 								</div>
 								</div>
 							</div>
@@ -220,17 +267,6 @@
 	</div>
 </body>
 </html>
-<script type="text/javascript">
-		var bgImage = document.getElementById('depozitMain');
-		function BG(){
-			   if (document.body.scrollTop > '100vh' || document.documentElement.scrollTop > '100vh') {
-        	bgImage.style.opacity=0;
-			document.body.style.background='#3d62ac';
-			document.getElementsByClassName('calcSide')[0].style.display='block';
-    }else{bgImage.style.opacity=1;
-			document.body.style.background='#3d62ac';
-			// document.getElementsByClassName('calcSide')[0].style.display='none';
-		}
-
-		}
+<script type="text/javascript" src="script/scriptd.js">
+		
 	</script>
