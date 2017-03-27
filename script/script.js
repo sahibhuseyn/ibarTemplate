@@ -83,31 +83,20 @@ document.querySelector('.leftArrow').onclick=function(){
 }
 
 
-contactBtn.onclick=function(){
-	zoomMain.setAttribute('class','zoom_out');
-	document.querySelector('#contactUs').style.right='0px';
-}
-onlineBank.onclick=function(){
-	zoomMain.setAttribute('class','zoom_out');
-	document.querySelector('#bankOnline').style.right='0px';
-}
-internetBank.onclick=function(){
-	zoomMain.setAttribute('class','zoom_out');
-	document.querySelector('#internetBank').style.right='0px';
+var zoomMain = document.querySelector('#main');
+function showDivs(divs){
+		setTimeout(function(){
+			divs.style.right = 0;
+		},50)
+	
+	zoomMain.setAttribute('class','zoom_out');}
+
+function closeDivs(opens)
+{
+	opens.style.right = "-50%";
+	zoomMain.setAttribute('class','zoom_in');
 }
 
-closeDivthird.onclick=function(){
-	zoomMain.setAttribute('class','zoom_in');
-	document.querySelector('#bankOnline').style.right='-50%';
-}
-closeDivsecond.onclick=function(){
-	zoomMain.setAttribute('class','zoom_in');
-	document.querySelector('#contactUs').style.right='-50%';
-}
-closeDivfirst.onclick=function(){
-	zoomMain.setAttribute('class','zoom_in');
-	document.querySelector('#internetBank').style.right='-50%';
-}
 
 
 /*polygon*/
@@ -196,12 +185,15 @@ corporateBtn.addEventListener('click', function(){
 
 	if (changeBg.style.visibility!='visible') {
 		setTimeout(myFun(),30)
-	}else {
+	}
+	else 
+	{
 		window.myFun = null;
 	}
 	
 	h2.innerHTML=changeCapArr[1];
-	for (var x = 0; x<corporativeListArr.length;x++) {
+	for (var x = 0; x<corporativeListArr.length;x++)
+	{
 	hLink[x].innerHTML = corporativeListArr[x];
 	}
 
@@ -216,8 +208,11 @@ corporateBtn.addEventListener('click', function(){
 var diliminate='- '
 var phone_mask=document.getElementsByClassName('phoneMask')[0];
 phone_mask.defaultValue='+994'+' '+ '00'+' '+ '000'+ diliminate+'00'+ diliminate +'00';
-if (phone_mask.value.length == 2) {
+if (phone_mask.value.length == 2)
+{
 	phone_mask.value = "";
-}else if (phone_mask.length==3) {
+}
+else if (phone_mask.length==3)
+{
 	phone_mask.innerHTML ="-";
 }

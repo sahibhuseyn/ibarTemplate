@@ -177,10 +177,21 @@ html, body{
     vertical-align: middle;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
-    position: relative;
+    /*position: relative;*/
 }
 .bulletSelected{
-	background:  none;
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    opacity: 1;
+    border: 1px solid white;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    position: relative;
 	transition: background-color 0.6s ease;
 }
 .active {

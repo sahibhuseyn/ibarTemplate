@@ -37,15 +37,15 @@
 					</div>
 					<div class="col6 col_offset_2 menuRightBar">
 						<ul class="menuRight">
-							<li class="contactBtn" ><a href="#">Bizimlə əlaqə</a></li>
-							<li class="onlineBank"><a href="#">Bank online</a></li>
+							<li class="contactBtn"><a href="javascript:void(0)" onclick="showDivs(document.querySelector('#contactUs'))" >Bizimlə əlaqə</a></li>
+							<li class="onlineBank" ><a href="javascript:void(0)" onclick="showDivs(document.querySelector('#bankOnline'))"  >Bank online</a></li>
 							<li class="currency"><a href="#">usd</a></li>
 							<li class="buy"><a href="#">1.6700 alış<span> •</span></a></li>
 							<li class="sell"><a href="#">1.7400 satış</a></li>
 						</ul>
 						<div class="rightSide">
 							<a href="#">
-								<span class="internetBank">internetBank</span>
+								<span class="internetBank" onclick="showDivs(document.querySelector('#internetBank'))" >internetBank</span>
 							</a>
 						</div>
 					</div>
@@ -212,7 +212,7 @@
 				</p>
 			</div>
 			<div class="col2 close">
-				<a href="javascript:void(0)"><img src="images/img/close.svg" alt="" class="closeDivfirst"></a>
+				<a href="javascript:void(0)"><img src="images/img/close.svg" alt="" class="closeDivfirst" onclick="closeDivs(document.querySelector('#internetBank'))"></a>
 			</div>
 		</div>
 		<div class="row">
@@ -237,7 +237,7 @@
 				</p>
 			</div>
 			<div class="col2 close">
-				<a href="javascript:void(0)"><img src="images/img/close.svg" alt="" class="closeDivsecond"></a>
+				<a href="javascript:void(0)"><img src="images/img/close.svg" alt="" class="closeDivsecond" onclick="closeDivs(document.querySelector('#contactUs'))"></a>
 			</div>
 		</div>
 		<div class="row">
@@ -309,7 +309,7 @@
 				</p>
 			</div>
 			<div class="col2 close " >
-				<a href="javascript:void(0)"><img src="images/img/close.svg" alt="" class="closeDivthird"></a>
+				<a href="javascript:void(0)" onclick="closeDivs(document.querySelector('#bankOnline'))"><img src="images/img/close.svg" alt=""  ></a>
 			</div>
 		</div>
 		<div class="row">
@@ -326,184 +326,6 @@
 			</div>
 		</div>
 	</div>
-<!-- 
-	<div id="individualCorporative">
-		<div class="row">
-			<div class="inCorCap">
-				<div class="col3">
-					<ul>
-						<li>Fərdi</li>
-						<li>Korporativ</li>
-					</ul>
-				</div>
-				<div class="col2 " >
-					<a href="javascript:void(0)"><img src="images/img/close_gray.svg" alt="" class="closeDivInCor"></a>
-				</div>
-			</div>
-		</div>
-		<div class="row inCorSearch">
-			<input type="text" value="Axtar">
-		</div>
-		<div class="row">
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Bank 24/7</a>
-				</div>
-				<ul>
-					<li><a href="#">MobilBank</a></li>
-					<li><a href="#">InternetBank</a></li>
-					<li><a href="#">Bankomat</a></li>
-					<li><a href="#">Ödəniş terminalı</a></li>
-					<li><a href="#">Cash-in bankomatı</a></li>
-				</ul>
-			</div>
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Kreditlər<</a>
-				</div>
-				<ul>
-					<li><a href="#">Əmək haqqı krediti</a></li>
-                    <li><a href="#">Pensiya krediti</a></li>
-                    <li><a href="#">Pensiya +</a></li>
-                    <li><a href="#">Kart üzrə kredit limiti</a></li>
-                    <li><a href="#">Əmanətçi nağd krediti</a></li>
-                    <li><a href="#">Əmanətçi kredit limiti</a></li>
-                    <li><a href="#">İpoteka krediti (AİF)</a></li>
-				</ul>
-			</div>
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Əmanətlər</a>
-				</div>
-				<ul>
-					<li><a href="#">"Klassik" əmanəti</a></li>
-                    <li><a href="#">ElektronDepozit</a></li>
-                    <li><a href="#">Əmanətlərin sığortalanması</a></li>
-                    <li><a href="#">Depozit seyfi</a></li>
-                </ul>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Bank 24/7</a>
-				</div>
-				<ul>
-					<li><a href="#">MobilBank</a></li>
-					<li><a href="#">InternetBank</a></li>
-					<li><a href="#">Bankomat</a></li>
-					<li><a href="#">Ödəniş terminalı</a></li>
-					<li><a href="#">Cash-in bankomatı</a></li>
-				</ul>
-			</div>
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Kreditlər<</a>
-				</div>
-				<ul>
-					<li><a href="#">Əmək haqqı krediti</a></li>
-                    <li><a href="#">Pensiya krediti</a></li>
-                    <li><a href="#">Pensiya +</a></li>
-                    <li><a href="#">Kart üzrə kredit limiti</a></li>
-                    <li><a href="#">Əmanətçi nağd krediti</a></li>
-                    <li><a href="#">Əmanətçi kredit limiti</a></li>
-                    <li><a href="#">İpoteka krediti (AİF)</a></li>
-				</ul>
-			</div>
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Əmanətlər</a>
-				</div>
-				<ul>
-					<li><a href="#">"Klassik" əmanəti</a></li>
-                    <li><a href="#">ElektronDepozit</a></li>
-                    <li><a href="#">Əmanətlərin sığortalanması</a></li>
-                    <li><a href="#">Depozit seyfi</a></li>
-                </ul>
-			</div>
-		</div>
-		</div>
-		<div class="row">
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Bank 24/7</a>
-				</div>
-				<ul>
-					<li><a href="#">MobilBank</a></li>
-					<li><a href="#">InternetBank</a></li>
-					<li><a href="#">Bankomat</a></li>
-					<li><a href="#">Ödəniş terminalı</a></li>
-					<li><a href="#">Cash-in bankomatı</a></li>
-				</ul>
-			</div>
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Kreditlər<</a>
-				</div>
-				<ul>
-					<li><a href="#">Əmək haqqı krediti</a></li>
-                    <li><a href="#">Pensiya krediti</a></li>
-                    <li><a href="#">Pensiya +</a></li>
-                    <li><a href="#">Kart üzrə kredit limiti</a></li>
-                    <li><a href="#">Əmanətçi nağd krediti</a></li>
-                    <li><a href="#">Əmanətçi kredit limiti</a></li>
-                    <li><a href="#">İpoteka krediti (AİF)</a></li>
-				</ul>
-			</div>
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Əmanətlər</a>
-				</div>
-				<ul>
-					<li><a href="#">"Klassik" əmanəti</a></li>
-                    <li><a href="#">ElektronDepozit</a></li>
-                    <li><a href="#">Əmanətlərin sığortalanması</a></li>
-                    <li><a href="#">Depozit seyfi</a></li>
-                </ul>
-			</div>
-		</div>
-		</div>
-		<div class="row">
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Bank 24/7</a>
-				</div>
-				<ul>
-					<li><a href="#">MobilBank</a></li>
-					<li><a href="#">InternetBank</a></li>
-					<li><a href="#">Bankomat</a></li>
-					<li><a href="#">Ödəniş terminalı</a></li>
-					<li><a href="#">Cash-in bankomatı</a></li>
-				</ul>
-			</div>
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Kreditlər<</a>
-				</div>
-				<ul>
-					<li><a href="#">Əmək haqqı krediti</a></li>
-                    <li><a href="#">Pensiya krediti</a></li>
-                    <li><a href="#">Pensiya +</a></li>
-                    <li><a href="#">Kart üzrə kredit limiti</a></li>
-                    <li><a href="#">Əmanətçi nağd krediti</a></li>
-                    <li><a href="#">Əmanətçi kredit limiti</a></li>
-                    <li><a href="#">İpoteka krediti (AİF)</a></li>
-				</ul>
-			</div>
-			<div class="col4">
-				<div class="inCap">
-					<a href="#">Əmanətlər</a>
-				</div>
-				<ul>
-					<li><a href="#">"Klassik" əmanəti</a></li>
-                    <li><a href="#">ElektronDepozit</a></li>
-                    <li><a href="#">Əmanətlərin sığortalanması</a></li>
-                    <li><a href="#">Depozit seyfi</a></li>
-                </ul>
-			</div>
-		</div>
-		</div>
-	</div> -->
 </body>
 <script type="text/javascript" src="script/script.js"></script>
 </html>

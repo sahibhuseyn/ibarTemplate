@@ -150,11 +150,14 @@ html, body{
 	font-size: 1em;
     display: block;
     padding: 7px 20px;
-    background: rgba(255, 255, 255, 0);
+    /*background: rgba(255, 255, 255, 0);*/
     transition: all .3s ease-out;
 }
 .depoList li a:active,
 .depoList li a:hover{
+	background: #8da2ce;
+}
+.depoListActiv{
 	background: #8da2ce;
 }
 .leftCap{
