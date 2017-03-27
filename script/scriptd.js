@@ -57,9 +57,10 @@ var curVal=document.querySelector('.curVal');
 
 azn.onclick=function(){
 	periodInput.disabled=false;
-	document.querySelectorAll('.curVal')[0].innerHTML = 'azn';
-	document.querySelectorAll('.curVal')[1].innerHTML = 'azn';
-	
+
+	for (var i =0; i<document.querySelectorAll('.curVal').length; i++) {
+		document.querySelectorAll('.curVal')[i].innerHTML = 'azn';
+	}	
 }
 usd.onclick=function(){
 
@@ -67,14 +68,14 @@ var x = document.getElementById("calcPayment").value;
 
 	periodInput.disabled=true;
 
-
 	if (x=='month') {
 		rateDeg.innerHTML='3%';
 	}else {
 		rateDeg.innerHTML='3.25%';
 	}
-	document.querySelectorAll('.curVal')[0].innerHTML = 'usd';
-	document.querySelectorAll('.curVal')[1].innerHTML = 'usd';
+	for (var i =0; i<document.querySelectorAll('.curVal').length; i++) {
+		document.querySelectorAll('.curVal')[i].innerHTML = 'usd';
+	}
 }
 
 function amountRange(){

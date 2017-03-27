@@ -17,11 +17,11 @@ window.onclick=function(event){
 		placeholder.setAttribute('class','')
 	}else {
 		searchInput.addEventListener('click',function(){
-	trick.style.display = 'block';
-	placeholder.setAttribute('class','focus')
-	placeholder.style.top=0;
-	placeholder.style.left=0;
-	placeholder.style.fontSize="20px";
+		trick.style.display = 'block';
+		placeholder.setAttribute('class','focus')
+		placeholder.style.top=0;
+		placeholder.style.left=0;
+		placeholder.style.fontSize="20px";
 })
 	}
 }
@@ -82,6 +82,7 @@ document.querySelector('.leftArrow').onclick=function(){
 	document.querySelector('.conCapP').style.left='0';
 }
 
+
 contactBtn.onclick=function(){
 	zoomMain.setAttribute('class','zoom_out');
 	document.querySelector('#contactUs').style.right='0px';
@@ -109,7 +110,7 @@ closeDivfirst.onclick=function(){
 }
 
 
-/*farmazon*/
+/*polygon*/
 var changeCapArr = ['Fərdi','Korporativ'];
 var individualListArr =['Bank 24/7', 'Əmanətlər','Elektron xidmətlər','Cari hesab','Kreditlər','Ödəniş kartları','Köçürmələr','Kampaniyalar'];
 var corporativeListArr=['Elektron bankçılıq', 'Sənədli əməliyyatlar','Ödəniş kartları','Hesablar','Biznes kreditləri','Əmanətlər','Köçürmələr','Bizimlə əlaqə'];
@@ -127,18 +128,19 @@ var overlay = document.createElement('div');
 var h2 = document.querySelector('.hTitle');
 var hLink = document.querySelectorAll('.hLink');
 
-
-
-individualBtn.addEventListener('click', function(){
-	 
+function middleMove(){
 	setTimeout(function(){
 		middleSection.style.top = '-50vh';
 	setTimeout(function(){
 		middleSection.style.top = '-100vh';
 	setTimeout(function(){
 		middleSection.style.display = 'none';
-	},30)
+	},40)
 	},30)},30);
+}
+
+individualBtn.addEventListener('click', function(){
+	 
 		setTimeout(function(){myFun()
 			setTimeout(function(){
 				h2.innerHTML=changeCapArr[0];
@@ -150,10 +152,13 @@ individualBtn.addEventListener('click', function(){
 				individualBtn.setAttribute('class','active');
 				corporateBtn.setAttribute('class','');
 
+				setTimeout(middleMove,20)
+
 			},30)
 			},30)
+
 		if (changeBg.style.visibility!='visible') {
-		setTimeout(myFun(),30)
+		myFun()
 		}else {
 			window.myFun = null;
 		}
@@ -186,21 +191,15 @@ function myFun(){
 	
 }
 corporateBtn.addEventListener('click', function(){
+
+	middleMove()
+
 	if (changeBg.style.visibility!='visible') {
 		setTimeout(myFun(),30)
 	}else {
 		window.myFun = null;
 	}
 	
-	setTimeout(function(){
-	middleSection.style.top = '-50vh';
-	setTimeout(function(){
-	middleSection.style.top = '-100vh';
-	setTimeout(function(){
-		middleSection.style.display = 'none';
-	},50)
-	},50)},50)
-
 	h2.innerHTML=changeCapArr[1];
 	for (var x = 0; x<corporativeListArr.length;x++) {
 	hLink[x].innerHTML = corporativeListArr[x];
@@ -214,8 +213,9 @@ corporateBtn.addEventListener('click', function(){
 
 
 /*phone mask*/
+var diliminate='- '
 var phone_mask=document.getElementsByClassName('phoneMask')[0];
-phone_mask.defaultValue='+994 00 000-00-00';
+phone_mask.defaultValue='+994'+' '+ '00'+' '+ '000'+ diliminate+'00'+ diliminate +'00';
 if (phone_mask.value.length == 2) {
 	phone_mask.value = "";
 }else if (phone_mask.length==3) {

@@ -526,6 +526,8 @@ html, body{
 	background-size: cover;
 }
 .sideOverlay{
+	width: 100vw;
+	height: 100vh;
 	width: 100%;
 	height: 100%;
 	background: #5575b7;
@@ -573,4 +575,51 @@ html, body{
     transition: .4s;
     top: 0;
     box-shadow: -95px 0px 150px rgba(0, 0, 0, .25);
+}
+.inCorCap ul li{
+	float: left;
+	font-size: 27px;
+	margin: 25px;
+}
+.closeDivInCor{
+	width: 25px;
+	height: 25px;
+	float: right;
+	margin: 25px;
+}
+.incorSearch{
+	width: 100%;
+}
+.incorSearch input[type=text]{
+	width: 80%;
+	height: 50px;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid grey;
+	margin-left: 15px;
+	color: #fff;
+	outline: none;
+	font-size: 25px;
+}
+.inCopUlList{
+	color: #fff;
+	margin: 30px;
+	font-size: 1.5em;
+	transition: all .3 ease;
+}
+.inCap{
+	margin-bottom: 5px;
+}
+.inCap a{
+	color: #fff;
+	text-decoration: none;
+}
+.indList a{
+	text-decoration: none;
+	color: #fff;
+	font-size: .5em;
+}
+.inCap a:hover,
+.indList a:hover{
+	text-decoration: underline;
 }
